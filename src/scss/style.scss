@@ -1,3 +1,68 @@
 @import "fonts";
 @import "obn.scss";
 
+.wrapper {
+   min-height: 100%;
+
+   overflow: hidden;
+   display: grid;
+   grid-template: 150px 1fr 100px/ 1fr;
+   grid-template-areas: 'header'
+                        'main'
+                        'footer';
+   background: rgb(252, 243, 227);
+}
+.header {
+   grid-area: header;
+   
+}
+.menu {
+display: flex;
+justify-content: space-around;
+align-items: center;
+		&__logo img {
+         border-radius: 50%;
+         width: 100px;
+         height: 100px;
+        
+		}
+
+		&__list {
+         display: flex;
+        
+		}
+
+		&__info {
+
+		}
+}
+
+.menu__info::before{
+   content: '';
+   display: inline-block;
+   background-image: url('../svgicons/free-icon-font-arrow-alt-down-7434938.svg') left no-repeat;
+left: 20px;
+}
+.town li:before {
+   content: '';
+   background-image: url('@img/free-icon-font-circle-phone-8034066.png') left no-repeat;
+left: 20px;
+}
+
+.watch {
+}
+.tel {
+
+}
+
+.main {
+   grid-area: main;
+
+}
+.footer {
+   grid-area: footer;
+   background: blue;
+}
+
+
+
